@@ -47,7 +47,7 @@ int partition(Interval interval3[], int startindex, int endindex ){
 	long int pivot = interval3[endindex].start;
 	int j = startindex -1;
 	//display (interval3);
-	for (int i=startindex; i < (endindex-1); i++){
+	for (int i=startindex; i <=(endindex-1); i++){
 		//cout << "Inteval.start " << interval3[i].start <<"Pivot"<<pivot<<endl;
 	    if (interval3[i].start < pivot){
 			j++;
