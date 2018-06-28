@@ -1,0 +1,30 @@
+###########################C++#############################
+https://en.wikipedia.org/wiki/C%2B%2B11
+https://en.wikipedia.org/wiki/C%2B%2B14
+https://msdn.microsoft.com/en-us/library/dd293608.aspx
+https://www.geeksforgeeks.org/lambda-expression-in-c/
+https://www.geeksforgeeks.org/c-mutable-keyword/
+
+###########################Linux###########################
+
+OpenSSL
+	https://www.openssl.org/docs/man1.0.2/crypto/RSA_sign.html
+	https://wiki.openssl.org/index.php/EVP_Signing_and_Verifying
+	setting the binary option for dgst
+	https://github.com/openssl/openssl/blob/master/apps/dgst.c
+		 {"binary", OPT_BINARY, '-', "Print in binary form"},
+
+###########################Autosar#########################
+https://www.autosar.org/fileadmin/user_upload/standards/classic/4-3/AUTOSAR_EXP_LayeredSoftwareArchitecture.pdf
+
+
+###########################Android#########################
+Boot process
+	https://community.nxp.com/docs/DOC-102546
+init.rc details
+	https://community.nxp.com/docs/DOC-102537
+
+
+###########################QNX##############################
+http://www.qnx.com/developers/docs/7.0.0/#com.qnx.doc.hypervisor.user/topic/virt/qvm.html
+

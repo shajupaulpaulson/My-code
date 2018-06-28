@@ -1,5 +1,7 @@
 #include<iostream>
 #include <iomanip>
+#include <sstream>
+#include <string>
 using namespace std;
 /*
 Input : n = 4
@@ -61,9 +63,32 @@ void printpattern(int &column_number ){
 }
 int main ()
 {
-	int column_number=4;
-	cin >> column_number;
-	printpatternsamenumber(column_number);
-	printpattern(column_number);
+	long int column_number=4;
+	string text;
+	int error =0;
+	/*
+	Defining such a way that user can take only integer.
+	*/
+	do{
+		if (error > 0)
+		{
+			cout <<" Please enter a valid number between 0 to 32767" <<endl <<"Or press E or q to exit or quit" <<endl;
+		}
+		cout << "Please enter a number" << endl;
+		cin >> text;
+		if(text == "E" || text == "e" || text == "exit" || text == "Q" || text == "q" || text == "Quit") {
+			cout<<"Exiting program";
+			return(2);
+		}
+	
+		stringstream txt(text);
+		txt >> column_number;
+		cout << "Number decided " << column_number << endl;
+		error++;
+	}while (column_number > 32767 || column_number <= 0);
+    int col = static_cast <int>(column_number) ;
+		
+	printpatternsamenumber(col);
+	printpattern(col);
 	
 }
