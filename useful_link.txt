@@ -4,6 +4,24 @@ https://en.wikipedia.org/wiki/C%2B%2B14
 https://msdn.microsoft.com/en-us/library/dd293608.aspx
 https://www.geeksforgeeks.org/lambda-expression-in-c/
 https://www.geeksforgeeks.org/c-mutable-keyword/
+https://tech.io/playgrounds/10505/c17-stdoptional
+http://www.keithschwarz.com/cs106l/winter20072008/handouts/
+
+Constructor
+	https://www.geeksforgeeks.org/constructors-c/
+	https://www.geeksforgeeks.org/when-do-we-use-initializer-list-in-c/
+	https://www.geeksforgeeks.org/can-constructor-private-cpp/
+	http://www.keithschwarz.com/cs106l/winter20072008/handouts/170_Copy_Constructor_Assignment_Operator.pdf
+
+Constant
+	http://www.keithschwarz.com/cs106l/winter20072008/handouts/140_const.pdf
+	
+Static
+	http://www.keithschwarz.com/cs106l/winter20072008/handouts/160_static.pdf
+
+Inheritance	
+	http://www.keithschwarz.com/cs106l/winter20072008/handouts/240_Inheritance_1.pdf
+	http://www.keithschwarz.com/cs106l/winter20072008/handouts/250_Inheritance_2.pdf
 
 ###########################Linux###########################
 
@@ -14,11 +32,26 @@ OpenSSL
 	https://github.com/openssl/openssl/blob/master/apps/dgst.c
 		 {"binary", OPT_BINARY, '-', "Print in binary form"},
 
+	# private key
+	openssl genrsa -out privkey.pem 2048
+
+	# public key
+	openssl rsa -in privkey.pem -pubout -out pubkey.pem
+	
+	openssl rsa -in pubkey.pem -pubin -outform der | openssl dgst -sha256
+	
+	https://support.ssl.com/Knowledgebase/Article/View/19/0/der-vs-crt-vs-cer-vs-pem-certificates-and-how-to-convert-them	
 ###########################Autosar#########################
 https://www.autosar.org/fileadmin/user_upload/standards/classic/4-3/AUTOSAR_EXP_LayeredSoftwareArchitecture.pdf
 
 
 ###########################Android#########################
+https://www.studytonight.com/android/activity-in-android
+
+Partition and image flashing:
+https://source.android.com/devices/bootloader/partitions-images
+https://forum.xda-developers.com/android/general/info-android-device-partitions-basic-t3586565
+
 Boot process
 	https://community.nxp.com/docs/DOC-102546
 init.rc details

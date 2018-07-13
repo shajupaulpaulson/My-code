@@ -1,0 +1,61 @@
+Kernel:
+	1. Set up the Android build environment. From source root directory type the below commands:
+	source build/envsetup.sh
+	lunch msm8916_64-userdebug
+	
+	2. make –j8 bootimage
+	NOTE: In theory, it is possible to use –jn as long as ‘n’ is smaller than the number of processors in the server where the build is being created.
+	
+	3. To start with a clean tree, use the following commands:
+	a. To remove object files:
+	make –j8 clean
+	you can also use the below command to delete the kernel object files and run the build command again:
+	rm –rf out/target/product/msm8916_64/obj/KERNEL_OBJ/
+	
+Clean Build
+	(envsetup.sh/lunch)
+	croot
+	make -j4
+
+Building only one package:
+	m <modulename>
+or	
+	cd <folder_name>
+	mm 
+
+Clean build one module
+	m clean <modulename>
+or 
+	rm -rf out/target/product/*/ob/(STATIC/SHARED/EXECUTABLE/<module_name>_intermediates
+	
+Android Build adding new module:
+	Add modules under folder.
+	Edit Android.bp file and Android.mk file to ensure your module is compile
+	The known c++ extensions are .cpp and not .cc
+	Add in path.mk if path has to be modified. "android\build\core"
+	Update in build/target/product/*.mk file with regard to new package in MODULE_PACKAGE
+	
+SHELL commands after sourcing
+	printconfig --> "All build configuration"
+	m   --> builds a module
+	mm  --> builds module in the current directory
+	mmm --> build module in the supplied directory
+	croot --> top of the tree
+	sgrep --> grep tool
+	clean <module_name/packagename> --> cleans a patricular module
+	make clean --> cleanly deletes all the output and intermediate files
+
+MAKE FILE tips
+	Variable list:
+		LOCAL_SRC_FILES			--> list of all source files
+		LOCAL_MODULE			--> module name
+		LOCAL_CFLAGS			--> C compiler flag overrides
+		LOCAL_SHARED_LIBRARIES  --> Shared libraries
+		
+	Action:
+		include $(CLEAR_VARS) --> clears local variable for below sectiosn
+			include $(BUILD_SHARED_LIBRARIES)
+			include $(BUILD_STATIC_LIBRARIES)
+			include $(BUILD_EXECUTABLES)
+				
+	Android paths are relative to the Android root directory

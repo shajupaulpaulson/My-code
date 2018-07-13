@@ -1,0 +1,88 @@
+Android device tree structure
+The Android device tree structure, for example, the <Android device tree root>, is laid out as follows:
+	build/ – Build environment setup and makefiles
+	bionic/ – Android C library
+	dalvik/ – Android JVM
+	kernel/ – Linux kernel framework/ – Android platform layer (system libraries and Java components)
+	system/ – Android system (utilities and libraries, fastboot, logcat, liblog)
+	external/ – Non-Android-specific Open Source projects required for Android
+	prebuilt/ – Precompiled binaries for building Android, e.g., cross-compilers
+	packages/ – Standard Android Java applications and components
+	development/ – Android reference applications and tools for developers
+	hardware/ – HAL (audio, sensors) and Qualcomm specific hardware wrappers
+	vendor/qcom/ – Qualcomm target definitions, e.g., msm8916
+	vendor/qcom-proprietary/ – Qualcomm-proprietary components
+	out/ – Built files created by user
+	out/host/ – Host executables created by the Android build
+	out/target/product/<product> – Target files appsboot*.mbn – Applications boot loader
+	boot.img – Android boot image (Linux kernel + root FS)
+	system.img – Android components (/system)
+	userdata.img – Android development applications and database
+	root/ – Root FS directory, which compiles into ramdisk.img and merged into boot.img
+	system/ – System FS directory, which compiles into system.img
+	obj/ – Intermediate object files
+	include/ – Compiled include files from components lib/ STATIC_LIBRARIES/ SHARED_LIBRARIES/ EXECUTABLES/ APPS/
+	symbols/ – Symbols for all target binaries
+
+Android source tree structure
+	The Android source tree structure is laid out as follows:
+	/ – Root directory (ramdisk.img, read-only)
+	init.rc – Initialization configuration files (device config, service startups) init.qcom.rc
+	dev/ – Device nodes
+	proc/ – Process information
+	sys/ – System/kernel configuration
+	sbin/ – System startup binaries (adb daemon; read-only)
+	system/ – From system.img (read-write) – bin/ – Android system binaries
+	– lib/ – Android system libraries
+	– xbin/ – Nonessential binaries
+	– framework/ – Android framework components (Java)
+	– app/ – Android applications (Java)
+	– etc/ – Android configuration files
+	sdcard/ – Mount point for SD card
+	data/ – From userdata.img (read-write)
+	– app/ – User installed Android applications
+	– tombstones/ – Android crash logs
+	
+Differnt files for flashing Android:
+	fastboot flash boot out/target/product/*/boot.img
+	fastboot flash dts out/target/product/*/dt.img
+	fastboot flash system out/target/product/*/system.img
+	fastboot flash vendor out/target/product/*/vendor.img
+	fastboot flash cache out/target/product/*/cache.img
+	fastboot flash userdata out/target/product/*/userdata.img
+	
+	Cache:
+		previously to store OTA packets with Active/Passive structure need not be used. Cache.img is blank parition just used to format the eMMC
+	
+	Userdata
+		Stores all userdata and it also empty file usually for formatting eMMC to define user space. User installed application
+	
+	Recovery:
+		part of boot.img has the initramfs and also the recovery update system to update the system. Before starting the system partition the kernel should pass skip_initramfs in command line if not recovery is started
+		
+	kernel:
+		It is the made of an executable and libraries which are loaded after boot loader. It also loads the Device Tree Blob. this part of the boot image
+		
+	DTB Device Tree Blob
+		The DTB is used to say the list of devices connected to device and OS. It is like for a given hardware peripheral this file will have all address and will be use by kernl part of dt.img file
+		
+	System:
+		Contains the entire service and Android layer Activity manager and Dalvik etc.
+	
+	Vendor:
+		All the kernel modules delivered from Soc should be there in Vendor place to ensure the Vendor related stuff is not mixed.
+		
+	tos 
+		This is the TrustyOS partition fot storing security OS image
+
+		● system.img --> Contains mainly Android framework.
+		● boot.img   --> (kernel/ramdisk) Contains Linux kernel + Android patches.
+		● vendor.img --> Contains SoC-specific code and configurations.
+		● odm.img    --> Contains device-specific code and configurations.	
+		● oem.img    --> Contains OEM/carrier-related configurations and customizations.
+		● bootloader --> Brings up the kernel (vendor-proprietary).
+		● radio      --> Modem (proprietary).
+
+	
+	
+	
