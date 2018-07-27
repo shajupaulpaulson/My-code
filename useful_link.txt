@@ -49,9 +49,12 @@ https://www.autosar.org/fileadmin/user_upload/standards/classic/4-3/AUTOSAR_EXP_
 https://www.studytonight.com/android/activity-in-android
 
 Partition and image flashing:
-https://source.android.com/devices/bootloader/partitions-images
-https://forum.xda-developers.com/android/general/info-android-device-partitions-basic-t3586565
+	https://source.android.com/devices/bootloader/partitions-images
+	https://forum.xda-developers.com/android/general/info-android-device-partitions-basic-t3586565
 
+Build
+	https://www.oreilly.com/library/view/embedded-android/9781449327958/ch04.html
+	
 Boot process
 	https://community.nxp.com/docs/DOC-102546
 init.rc details
