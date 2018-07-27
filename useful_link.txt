@@ -41,6 +41,42 @@ OpenSSL
 	openssl rsa -in pubkey.pem -pubin -outform der | openssl dgst -sha256
 	
 	https://support.ssl.com/Knowledgebase/Article/View/19/0/der-vs-crt-vs-cer-vs-pem-certificates-and-how-to-convert-them	
+	
+###########################GIT#########################
+
+Cloning from git
+	git clone <URL>
+
+Adding the remote git location:
+	git remote add origin https://github.com/shajupaulpaulson/My-code.git
+	
+	:~/samba/views/project$ cd .git/
+    :~/samba/views/project/.git$ ls
+		branches  COMMIT_EDITMSG  config  description  gitk.cache  HEAD  hooks  index  info  logs  objects  ORIG_HEAD  refs
+	:~/samba/views/project/.git$ cat config 
+		[core]
+			repositoryformatversion = 0
+			filemode = true
+			bare = false
+			logallrefupdates = true
+		[remote "origin"]
+			url = https://github.com/shajupaulpaulson/My-code.git
+			fetch = +refs/heads/*:refs/remotes/origin/*
+		[branch "master"]
+			remote = origin
+			merge = refs/heads/master
+
+	
+Adding files and commiting
+	git add.
+	git commit -m "text"
+
+Have a file .gitignore with list of files to ignore
+
+Branching and pushing branch
+	git branch branch_name
+	git checkout branch_name 
+	git push origin HEAD:branch_name
 ###########################Autosar#########################
 https://www.autosar.org/fileadmin/user_upload/standards/classic/4-3/AUTOSAR_EXP_LayeredSoftwareArchitecture.pdf
 
