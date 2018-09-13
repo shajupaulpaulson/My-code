@@ -23,6 +23,7 @@ void printChannelguide(initializer_list<TVGuide> channeldetails){
 		cout << " Channel number :" << x.channelnumber << " - " << x.channelname << endl;
 	}
 }
+
 template<size_t SIZE>
 void printChannelguide(array<TVGuide, SIZE>& arr){
 	cout << "Size of list : " << SIZE << endl;
@@ -31,6 +32,15 @@ void printChannelguide(array<TVGuide, SIZE>& arr){
 	}
 }
 
+void printChannelguide(TVGuide channeldetails){
+	cout <<"Single Channel Info" <<endl;
+	cout << " Channel number :" << channeldetails.channelnumber << " - " << channeldetails.channelname << endl;
+
+}
+
+TVGuide get_default(){
+return {100,"DTH Info"};
+}
 /*void printChannelguide(dynarray<TVGuide>& arr){
 	cout << "Size of list : " << arr.size() << endl;
 	for (auto x : arr){
@@ -45,14 +55,17 @@ void newchannel(initializer_list<int> channelnumber){
 	}
 }
 
+
+
 int main(){
 	TVGuide sports={256,"Sports1"};
-	TVGuide FavMoview [] = {{151,"HBO"},{152,"Movies Now"},{154,"WB"}};
+	decltype(sports) FavMoview [] = {{151,"HBO"},{152,"Movies Now"},{154,"WB"}};
 	printChannelguide({{151,"HBO"},{152,"Movies Now"},{154,"WB"}});
 	int sizearr=(sizeof(FavMoview)/sizeof(*FavMoview));
     std::array<TVGuide,3> Y;
     std::copy(std::begin(FavMoview), std::end(FavMoview), std::begin(Y));	
 	printChannelguide(Y);
+	printChannelguide(get_default());
 	//dynarray<TVGuide> arr(sizearr);
 	newchannel({901, 902, 903});
 	return 0;
