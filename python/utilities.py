@@ -4,8 +4,15 @@
 import sys
 import os
 import commands
+program_name = sys.argv[0]
+arguments = sys.argv[1:]
+count = len(arguments)
 
 
+if len (sys.argv) != 2 :
+    print "Usage: python ex.py "
+    sys.exit (1)
+	
 ## Example pulls filenames from a dir, prints their relative and absolute paths
 def printdir(dir):
   filenames = os.listdir(dir)
@@ -18,8 +25,9 @@ def printdir(dir):
     print os.path.exists(filename)
     #os.mkdir(test1)
     #shutil.copy(test1, test2)
-
-printdir(".")
+for x in sys.argv[1:]:
+    print "Argument: ", x
+    printdir(x)
 
 def listdir(dir):
   cmd = 'ls -l ' + dir
