@@ -1,0 +1,9 @@
+foo
+was
+written
+to
+learn
+python
+for
+file
+operation
