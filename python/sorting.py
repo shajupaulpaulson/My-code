@@ -41,6 +41,9 @@ print tuple3
  
 tuple2 = ('hi',) ## size-1 tuple
 print tuple2
+print 2 in tuple3
+print 4 in tuple3
+
 	
 def Foo():
     return ("ERROR_ERROR",-1)
