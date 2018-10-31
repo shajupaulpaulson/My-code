@@ -1,0 +1,1 @@
+cmd_/home/pau3cob/samba/views/project/kernel_code_example/helloworld.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/pau3cob/samba/views/project/kernel_code_example/helloworld.ko /home/pau3cob/samba/views/project/kernel_code_example/helloworld.o /home/pau3cob/samba/views/project/kernel_code_example/helloworld.mod.o

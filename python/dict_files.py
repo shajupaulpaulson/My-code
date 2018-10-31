@@ -2,6 +2,8 @@
 
 # import modules used here -- sys is a very standard one
 import sys
+import os
+import glob
 
 ## Can build up a dict by starting with the the empty dict {}
 ## and storing key/value pairs into the dict like this:
@@ -78,3 +80,10 @@ for line in f: ## iterates over the lines of the file
 ## since 'line' already includes the end-of line.
 f.close()
 
+#dict to store all the file attributes as hash
+metadata = [(f, os.stat(f)) for f in glob.glob('*.py')]
+print metadata
+
+metadata_dict = {f:os.stat(f) for f in glob.glob('*.py')}
+print metadata_dict
+print metadata_dict.keys()

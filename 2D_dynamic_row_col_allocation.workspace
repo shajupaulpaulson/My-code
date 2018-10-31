@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Workspace Name="2D_dynamic_row_col_allocation" >
+  <Project Name="2D_dynamic_row_col_allocation" Path="2D_dynamic_row_col_allocation.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Project Name="2D_dynamic_row_col_allocation" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

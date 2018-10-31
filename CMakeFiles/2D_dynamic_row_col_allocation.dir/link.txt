@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wall -Werror -g   CMakeFiles/2D_dynamic_row_col_allocation.dir/2D_dynamic_row_col_allocation/dynamic_row_col.cc.o  -o 2D_dynamic_row_col_allocation 

@@ -1,0 +1,3 @@
+/home/pau3cob/samba/views/project/CMakeFiles/edit_cache.dir
+/home/pau3cob/samba/views/project/CMakeFiles/rebuild_cache.dir
+/home/pau3cob/samba/views/project/CMakeFiles/2D_dynamic_row_col_allocationE.dir

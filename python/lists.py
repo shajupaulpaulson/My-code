@@ -71,3 +71,9 @@ print list.reverse()
 print list
 print list1.pop(2)
 print list3.remove('c')
+
+a_set = set(range(10))
+print a_set
+print {x ** 2 for x in a_set}
+print {x for x in a_set if x % 2 == 0}
+print {2**x for x in range(10)}

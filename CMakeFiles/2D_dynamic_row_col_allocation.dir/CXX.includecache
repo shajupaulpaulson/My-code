@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pau3cob/samba/views/project/2D_dynamic_row_col_allocation/dynamic_row_col.cc
+cmath
+-
+cstdio
+-
+vector
+-
+iostream
+-
+algorithm
+-
+

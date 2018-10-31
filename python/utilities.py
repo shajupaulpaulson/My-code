@@ -59,6 +59,10 @@ def listdir(dir):
   print metadata.st_size
   print time.localtime(metadata.st_mtime)
   print humansize.approximate_size(metadata.st_size)
+  print [os.path.realpath(f) for f in glob.glob('*.py')]
+  print [f for f in glob.glob('*.py') if os.stat(f).st_size > 2000]
+  print [(os.stat(f).st_size, os.path.realpath(f)) for f in glob.glob('*.py')]
+
   
 listdir(".")
 
