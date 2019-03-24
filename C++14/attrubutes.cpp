@@ -10,8 +10,8 @@ https://en.wikipedia.org/wiki/C%2B%2B14
 using namespace std;
 [[attr1("Static varibale used both in thread and Parent")]]static int abc =2;
 
-// Nice way in Software industry the cheif architect can write these as part of review comments and he could possibly check in so that the developer can work on optimization provided by architect will help in cleaning old code
-[[deprecated("Deprecteated since the worker thread is not optimized")]]
+// Nice way in Software industry to put compiler comments -fwarnings-attributes
+[[attr2("Deprecteated since the worker thread is not optimized")]]
 void WorkerThread(void);
 
 int main(){
