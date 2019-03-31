@@ -1,0 +1,25 @@
+#include "pHTTPServer.h"
+
+virtual const SocketAddress & pHTTPServer::clientAddress() const{
+
+}
+
+virtual HTTPServerResponse & pHTTPServer::response() const{
+
+}
+
+virtual bool pHTTPServer::secure() const{
+	return false;
+}
+
+virtual const SocketAddress & pHTTPServer::serverAddress() const{
+
+}
+
+virtual const HTTPServerParams & pHTTPServer::serverParams() const{
+
+}
+
+virtual std::istream & pHTTPServer::stream() {
+
+}
