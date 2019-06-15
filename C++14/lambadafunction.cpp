@@ -12,7 +12,7 @@ https://en.wikipedia.org/wiki/C%2B%2B14
 
 using namespace std;
 template <typename T>
-void printVector(vector<T> & v){
+void printVector(const vector<T> & v)  {
 	cout << "values are :" <<endl;
 	for(auto x: v){
 		cout << x << endl;
@@ -21,7 +21,7 @@ void printVector(vector<T> & v){
 }
 
 template <typename T>
-void SumVector(vector<T> & v){
+void SumVector(const vector<T> & v) {
 	auto sum = 0;
 	auto it = for_each(v.begin(), v.end(),[&sum](T i)mutable -> T//To remove constant of sum when passed to lambada
 	{
@@ -31,7 +31,7 @@ void SumVector(vector<T> & v){
 }
 
 template <typename T>
-void FactorialVector(vector<T> & v){
+void FactorialVector(const vector<T> & v) {
 	auto fact = 1;
 	auto it1 = for_each(v.begin(), v.end(),[&fact](T i)mutable -> T //int is known to compiler tbut for our learning
 	{
