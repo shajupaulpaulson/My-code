@@ -1,0 +1,16 @@
+Read Project Documentation before this.
+
+====================================================================
+Build documentation
+====================================================================
+
+Go into the folder
+The tool used in the build is cmake please install cmake for build
+
+	cmake --build .
+
+It generates and exectuable : Guess_sequence
+
+This executable is run to start the game
+
+

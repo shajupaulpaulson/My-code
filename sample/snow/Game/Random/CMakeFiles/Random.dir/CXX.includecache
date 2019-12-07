@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shaju/project/sample/snow/Game/Random/src/RandomGen.cpp
+inc/RandomGen.h
+/home/shaju/project/sample/snow/Game/Random/src/inc/RandomGen.h
+
+Game/Random/inc/RandomGen.h
+random
+-
+string
+-
+iostream
+-
+

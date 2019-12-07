@@ -1,0 +1,2 @@
+/usr/bin/ar qc libGuessUserInput.a  CMakeFiles/GuessUserInput.dir/src/GuessUserInputMessagereceive.cpp.o CMakeFiles/GuessUserInput.dir/src/GuessUserInputAlgorthim.cpp.o
+/usr/bin/ranlib libGuessUserInput.a

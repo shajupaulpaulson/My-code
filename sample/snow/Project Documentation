@@ -1,0 +1,10 @@
+Steps to be done:
+==================
+
+1. Unzip the folder 
+2. Place it in a folder
+3. Open config.h file
+	a. Configure the device name in the variable provided
+	b. Provide the keycode for each of the keys "ev_code"
+4. Proceed with the build process
+5. Run the Process as root since the device is accessible as root only previllage

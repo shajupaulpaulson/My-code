@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shaju/project/sample/snow/Game/GuessUserInput/src/GuessUserInputAlgorthim.cpp
+inc/GuessUserInputAlgorthim.h
+/home/shaju/project/sample/snow/Game/GuessUserInput/src/inc/GuessUserInputAlgorthim.h
+
+/home/shaju/project/sample/snow/Game/GuessUserInput/src/GuessUserInputMessagereceive.cpp
+inc/GuessUserInputMessagereceive.h
+/home/shaju/project/sample/snow/Game/GuessUserInput/src/inc/GuessUserInputMessagereceive.h
+inc/GuessUserInputAlgorthim.h
+/home/shaju/project/sample/snow/Game/GuessUserInput/src/inc/GuessUserInputAlgorthim.h
+
+Game/GuessUserInput/inc/GuessUserInputAlgorthim.h
+string
+-
+map
+-
+iostream
+-
+
+Game/GuessUserInput/inc/GuessUserInputMessagereceive.h
+mqueue.h
+-
+stdlib.h
+-
+unistd.h
+-
+fcntl.h
+-
+sys/wait.h
+-
+thread
+-
+iostream
+-
+sstream
+-
+string
+-
+

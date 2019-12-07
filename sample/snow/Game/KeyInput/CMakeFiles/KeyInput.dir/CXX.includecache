@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shaju/project/sample/snow/Game/KeyInput/src/KeyInputWorker.cpp
+inc/KeyInputWorker.h
+/home/shaju/project/sample/snow/Game/KeyInput/src/inc/KeyInputWorker.h
+
+Game/KeyInput/inc/KeyInputWorker.h
+mqueue.h
+-
+stdlib.h
+-
+linux/input.h
+-
+unistd.h
+-
+signal.h
+-
+fcntl.h
+-
+sys/wait.h
+-
+iostream
+-
+string
+-
+thread
+-
+

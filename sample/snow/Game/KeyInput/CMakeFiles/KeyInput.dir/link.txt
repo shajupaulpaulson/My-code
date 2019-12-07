@@ -1,0 +1,2 @@
+/usr/bin/ar qc libKeyInput.a  CMakeFiles/KeyInput.dir/src/KeyInputWorker.cpp.o
+/usr/bin/ranlib libKeyInput.a

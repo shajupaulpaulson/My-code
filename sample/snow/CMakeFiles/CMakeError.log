@@ -1,0 +1,59 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/shaju/project/sample/snow/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_09ec8/fast"
+make[1]: Entering directory '/home/shaju/project/sample/snow/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_09ec8.dir/build.make CMakeFiles/cmTC_09ec8.dir/build
+make[2]: Entering directory '/home/shaju/project/sample/snow/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_09ec8.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_09ec8.dir/CheckSymbolExists.c.o   -c /home/shaju/project/sample/snow/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_09ec8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09ec8.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_09ec8.dir/CheckSymbolExists.c.o  -o cmTC_09ec8 
+CMakeFiles/cmTC_09ec8.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_09ec8.dir/build.make:97: recipe for target 'cmTC_09ec8' failed
+make[2]: *** [cmTC_09ec8] Error 1
+make[2]: Leaving directory '/home/shaju/project/sample/snow/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_09ec8/fast' failed
+make[1]: *** [cmTC_09ec8/fast] Error 2
+make[1]: Leaving directory '/home/shaju/project/sample/snow/CMakeFiles/CMakeTmp'
+
+File /home/shaju/project/sample/snow/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/shaju/project/sample/snow/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20169/fast"
+make[1]: Entering directory '/home/shaju/project/sample/snow/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_20169.dir/build.make CMakeFiles/cmTC_20169.dir/build
+make[2]: Entering directory '/home/shaju/project/sample/snow/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20169.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_20169.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_20169
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20169.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_20169.dir/CheckFunctionExists.c.o  -o cmTC_20169 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_20169.dir/build.make:97: recipe for target 'cmTC_20169' failed
+make[2]: *** [cmTC_20169] Error 1
+make[2]: Leaving directory '/home/shaju/project/sample/snow/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_20169/fast' failed
+make[1]: *** [cmTC_20169/fast] Error 2
+make[1]: Leaving directory '/home/shaju/project/sample/snow/CMakeFiles/CMakeTmp'
+
+
