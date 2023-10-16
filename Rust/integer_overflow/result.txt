@@ -1,0 +1,14 @@
+thread 'main' panicked at src/main.rs:5:9:
+attempt to add with overflow
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/cc66ad468955717ab92600c770da8c1601a4ff33/library/std/src/panicking.rs:595:5
+   1: core::panicking::panic_fmt
+             at /rustc/cc66ad468955717ab92600c770da8c1601a4ff33/library/core/src/panicking.rs:67:14
+   2: core::panicking::panic
+             at /rustc/cc66ad468955717ab92600c770da8c1601a4ff33/library/core/src/panicking.rs:117:5
+   3: integer_overflow::main
+             at ./src/main.rs:5:9
+   4: core::ops::function::FnOnce::call_once
+             at /rustc/cc66ad468955717ab92600c770da8c1601a4ff33/library/core/src/ops/function.rs:250:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
